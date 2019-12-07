@@ -29,7 +29,7 @@ class Squirrel(models.Model):
     )
     # ???not finished
     hectare_squirrel_number = models.CharField(
-help_text=_('The number of squirrels per hectare'),
+        help_text=_('The number of squirrels per hectare'),
         max_length=10,
     )
     
@@ -61,7 +61,7 @@ help_text=_('The number of squirrels per hectare'),
     primary_fur_color  = models.CharField(
         help_text=_('Primary fur color'),
         max_length=10,
-choices=COLOR_CHOICES,
+        choices=COLOR_CHOICES,
         default=OTHERS,
     )
     GROUND_PLANE = 'ground plane'
@@ -92,14 +92,14 @@ choices=COLOR_CHOICES,
     climbing = models.BooleanField(
         default=False,
     )
-eating = models.BooleanField(
+    eating = models.BooleanField(
         default=False,
     )
     foraging = models.BooleanField(
         default=False,
     )
     other_activities = models.CharField(
-            help_text=_('Other activities squirrel is doing except those mentioned'),
+        help_text=_('Other activities squirrel is doing except those mentioned'),
         max_length=30,
     )
     kuks = models.BooleanField(
@@ -120,7 +120,7 @@ eating = models.BooleanField(
     approaches = models.BooleanField(
         default=False,
     )
-indifferent = models.BooleanField(
+    indifferent = models.BooleanField(
         default=False,
     )
     runs_from = models.BooleanField(
