@@ -3,61 +3,128 @@ from django.utils.translation import gettext as _
 from django.utils import timezone
 
 class squirrels(models.Model):
-   
+    longitude = models.FloatField(
+        help_text=_('Longitude'),
+    )
+    latitude = models.FloatField(
+        help_text=_('Latitude'),
+    )
+    Unique_Squirrel_ID=models.CharField(
+        help_text=_('Unique_squirrel_id'),
+        max_length=50,
+    )
+    AM = 'AM'
+    PM = 'PM'
+    OTHERS=''
+    SHIFT_CHOICES = (
+        (AM,'AM'),
+        (PM,'PM'),
+        (OTHERS,''),
+    )
+    shift=models.CharField(
+        max_length=2,
+        choices=SHIFT_CHOICES,
+        default=OTHERS,
+    )
+    Date = models.DateField(
+        help_text=_('Date'),
+    )
     
-    Longitude= models.DecimalField(help_text='Longitude',max_digits=16,decimal_places=13)
     
-    Latitude=models.DecimalField(help_text='Latitude',max_digits=16,decimal_places=13)
     
-    Unique_Squirrel_ID=models.CharField(help_text='Unique Squirrel ID',max_length=200,unique=True)
+  
+    ADULT = 'Adult'
+    JUVENILE = 'Juvenile'
+    OTHERS = ''
+    AGE_CHOICES = (
+        (ADULT, 'Adult'),
+        (JUVENILE, 'JUVENILE'),
+        (OTHERS, ''),
+    )
+    Age  = models.CharField(
+        help_text=_('Age of the squirrel'),
+        max_length=10,
+        choices=AGE_CHOICES,
+        default=OTHERS,
+    )
+    GRAY = 'Gray'
+    CINNAMON = 'Cinnamon'
+    BLACK = 'Black'
+    OTHERS = ''
+    COLOR_CHOICES = (
+        (GRAY, 'Gray'),
+        (CINNAMON, 'Cinnamon'),
+        (BLACK, 'Black'),
+        (OTHERS, ''),
+    )
+    Primary_fur_color = models.CharField(
+        help_text=_('Primary fur color'),
+        max_length=10,
+        choices=COLOR_CHOICES,
+        default=OTHERS,
+    )
+    GROUND_PLANE = 'ground plane'
+    ABOVE_GROUND = 'above ground'
+    OTHERS = ''
+    LOCATION_CHOICES = (
+        (GROUND_PLANE, 'ground plane'),
+        (ABOVE_GROUND, 'above ground'),
+        (OTHERS, ''),
+    )
+    Location = models.CharField(
+        help_text=_('Location of the squirrel'),
+        max_length=20,
+        choices=LOCATION_CHOICES,
+        default=OTHERS,
+    )
     
-    AM,PM='AM','PM'
-    
-    Shift=models.CharField(help_text='Shift',max_length=200, choices=((AM,'AM'),(PM,'PM'),),)
-    
-    Date=models.DateField(help_text='Date',blank=True,null=True,max_length=200,default=timezone.now)
-    
-    adult,juvenile='Adult','Juvenile'
-    age_choices=((adult,"Adult"),(juvenile, "Juvenile"),)
-    Age=models.CharField(help_text='Age',max_length=200,choices=age_choices,default=adult)
-    
-    gray,cinnamon,black='Gray','Cinnamon','Black'
-    fur_choices=((gray,"Gray"),(cinnamon, "Cinnamon"),(black,"Black"),)
-    Primary_fur_color=models.CharField(help_text='Primary Fur Color',max_length=200,choices=fur_choices,default=gray)
-    
-    ground_plane,above_ground="Ground Plane","Above Ground"
-    location_choices=((ground_plane,"Ground Plane"),(above_ground,"Above Ground"),)    
-    Location=models.CharField(help_text='Location',max_length=200,choices=location_choices,default=ground_plane)
-    
-    Specific_location=models.CharField(help_text='Specific Location',max_length=200,blank=True)
-    
-    Running=models.NullBooleanField(help_text='Running')
-    
-    Chasing=models.NullBooleanField(help_text='Chasing')
-    
-    Climbing=models.NullBooleanField(help_text='Climbing')
-    
-    Eating=models.NullBooleanField(help_text='Eating')
-    
-    Foraging=models.NullBooleanField(help_text='Foraging')
-    
-    Other_Activities=models.CharField(help_text='Other Activities',max_length=200,)
-    
-    Kuks=models.NullBooleanField(help_text='Kuks')
-    
-    Quaas=models.NullBooleanField(help_text='Quaas')
-    
-    Moans=models.NullBooleanField(help_text='Moans')
-    
-    Tail_flags=models.NullBooleanField(help_text='Tail_flags')
-    
-    Tail_twitches=models.NullBooleanField(help_text='Tail twitches')
-    
-    Approaches=models.NullBooleanField(help_text='Approaches')
-    
-    Indifferent=models.NullBooleanField(help_text='Indifferent')
-    
-    Runs_from=models.NullBooleanField(help_text='Runs from')
-   
+    Specific_location = models.CharField(
+            help_text = _('Specific Location'),
+            max_length=30,
+    )
+    Running = models.BooleanField(
+        default=False,
+    )
+    Chasing = models.BooleanField(
+        default=False,
+    )
+    Climbing = models.BooleanField(
+        default=False,
+    )
+    Eating = models.BooleanField(
+        default=False,
+    )
+    Foraging = models.BooleanField(
+        default=False,
+    )
+    Other_Activities = models.CharField(
+        help_text=_('Other activities squirrel is doing except those mentioned'),
+        max_length=30,
+    )
+    Kuks = models.BooleanField(
+        default=False,
+    )
+    Quaas = models.BooleanField(
+        default=False,
+    )
+    Moans = models.BooleanField(
+        default=False,
+    )
+    Tail_flags = models.BooleanField(
+        default=False,
+    )
+    Tail_twitches = models.BooleanField(
+        default=False,
+    )
+    Approaches = models.BooleanField(
+        default=False,
+    )
+    Indifferent = models.BooleanField(
+        default=False,
+    )
+    Runs_from = models.BooleanField(
+        default=False,
+    )
     def __str__(self):
         return self.Unique_Squirrel_ID
+
