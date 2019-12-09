@@ -6,7 +6,7 @@ from .models import squirrels
 
 
 def squirrels_map(request):
-    sightings=squirrels.objects.all()[:100]
+    sightings=squirrels.objects.all()[:45]
     
     return render(request, 'map/squirrels_map.html',{'sightings':sightings})
 # Create your views here.
