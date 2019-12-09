@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Sightings Update  page</title>
-    </head>
-
     <body>
-
-  	<div class="miniwrap">
-    	<form  method="POST" id="updateform">
-        	{% csrf_token %}
-		{{form.as_p}}
+        <div style="color:#009f6b">
+        <h1>Update the sighting</h1>
+	<form  method="POST" id="updateform">
+        {% csrf_token %}
+	{{form.as_p}}
 		
-        <input type="submit" name='Submit'>
-        <br>
-    	</form>
-	<h4>After clicking submit, you will be linked back to the index page.</h4>
-    	</div> 
-    </body>
+      <input type="submit" name='Submit'>
+        
+    </form>
+    </div> 
+   </body>
 </html>
