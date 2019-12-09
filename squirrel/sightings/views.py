@@ -36,4 +36,32 @@ def add_squirrels(request):
     }
     return render(request, 'sightings/update.html',context)
 
+def stats(request):
+    total_number = Squirrel.objects.all().count()
+    adult = Squirrel.objects.filter(age='Adult').count()
+    juvenile = Squirrel.objects.filter(age='Juvenile').count()
+    black = Squirrel.objects.filter(color='Black').count()
+    cinnamon = Squirrel.objects.filter(color='Cinnamon').count()
+    gray = Squirrel.objects.filter(color='Gray').count()
+    running = Squirrel.objects.filter(running=True).count()
+    chasing = Squirrel.objects.filter(chasing=True).count()
+    climbing = Squirrel.objects.filter(climbing=True).count()
+    eating = Squirrel.objects.filter(eating=True).count()
+    foraging = Squirrel.objects.filter(foraging=True).count()
+    context = {
+        'total_numbel': total_number,
+        'adult': adult,
+        'juvenile': juvenile,
+        'black': black,
+        'cinnamon': cinnamon,
+        'gray': gray,
+        'approach': approach,
+        'running': running,
+        'chasing':chasing,
+        'climbing':climbing,
+        'eating':eating,
+        'foraging':foraging,
+    }
+    return render(request, 'sightings/stats.html', context)
+
 
