@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 	<html>
 	<head>
 	
@@ -9,11 +9,17 @@
 	
 
 	<h1>Statistics of squirrels in the Central Park</h1>
-	<p><li>The total number of squirrels: {{stats1}}</p>
-	<p><li>Number of squirrels running away when being spotted: {{stats2}}</p>
-	<p><li>Number of squirrels climbing when being spotted: {{stats3}}</p>
-	<p><li>Number of black squirrels: {{stats4}}</p>
-	<p><li>Nuber of squirrels chasing when being spotted: {{stats5}}</p>
+	<p><li>The {{total number}} of squirrels</p>
+        <p><li>Number of squirrels that are adults: {{adult}}</p>
+	<p><li>Number of squirrels that are juveniles: {{juvenile}}</p>
+        <p><li>Number of squirrels that are black: {{black}}</p>
+	<p><li>Number of squirrels that are grey: {{grey}}</p>
+	<p><li>Number of squirrels that are cinnamon: {{cinnamon}}</p>
+	<p><li>Number of squirrels that are running when being spotted: {{running}}</p>
+        <p><li>Number of squirrels that are chasing when being spotted: {{chasing}}</p>
+        <p><li>Number of squirrels that are climbing when being spotted: {{climbing}}</p>
+        <p><li>Number of squirrels that are eating when being spotted: {{eating}}</p>
+        <p><li>Number of squirrels that are foraging when being spotted: {{foraging}}</p>
         <a href="{% url 'sightings:index' %}">Return to the home page!</a>
 	</body>
 	</html>
