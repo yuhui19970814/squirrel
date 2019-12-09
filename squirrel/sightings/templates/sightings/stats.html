@@ -1,18 +1,19 @@
-  
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-    <title>Stats Page</title>
+	<html>
+	<head>
+	
+        
+	<title>The Statistics of squirrels in the Central Park</title>
+	</head>
+	<body>
+	
 
-    </head>
-    <body>
-        <h4>stats1: The number of squirrels: {{stats1}}</h4>
-	<h4>stats2: Number of squirrels that runs away from people when they are sighted: {{stats2}}</h4>
-	<h4>stats3: Number of squirrels that climbs on the tree when they are sighted: {{stats3}}</h4>
-	<h4>stats4: Number of squirrels that are black : {{stats4}}</h4>
-	<h4>stats5: Nuber of squirrels that are chasing when sighted: {{stats5}}</h4>
-
-	<a href="{% url 'sightings:index' %}">Go back to the index page!</a>
-
-    </body>
-</html>
+	<h1>Statistics of squirrels in the Central Park</h1>
+	<p><li>The total number of squirrels: {{stats1}}</p>
+	<p><li>Number of squirrels running away when being spotted: {{stats2}}</p>
+	<p><li>Number of squirrels climbing when being spotted: {{stats3}}</p>
+	<p><li>Number of black squirrels: {{stats4}}</p>
+	<p><li>Nuber of squirrels chasing when being spotted: {{stats5}}</p>
+        <a href="{% url 'sightings:index' %}">Return to the home page!</a>
+	</body>
+	</html>
