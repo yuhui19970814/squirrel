@@ -3,12 +3,16 @@ from django.utils.translation import gettext as _
 from django.utils import timezone
 
 class squirrels(models.Model):
-    longitude = models.FloatField(
-        help_text=_('Longitude'),
-    )
-    latitude = models.FloatField(
-        help_text=_('Latitude'),
-    )
+    Longitude= models.DecimalField(
+        help_text='Longitude',
+        max_digits=20,
+        decimal_places=10)
+    
+    Latitude=models.DecimalField(
+        help_text='Latitude',
+        max_digits=20,
+        decimal_places=10)
+    
     Unique_Squirrel_ID=models.CharField(
         help_text=_('Unique_squirrel_id'),
         max_length=50,
