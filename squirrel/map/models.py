@@ -30,9 +30,12 @@ class squirrels(models.Model):
         choices=SHIFT_CHOICES,
         default=OTHERS,
     )
-    Date = models.DateField(
-        help_text=_('Date'),
-    )
+    Date=models.DateField(
+        help_text='Date',
+        blank=True,
+        null=True,
+        max_length=50,
+        default=timezone.now)
     
     
     
