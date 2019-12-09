@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>This is the index page of our squirrels sightings report!</title>
+    </head>
+    <body>
+
+        <h1>squirrels sightings report</h1>
+
+	<a href='{%url 'sightings:add'%}'>Add new data!</a>
+	<a href='{% url 'sightings:stats'%}'>See some stats!</a>
+
+        <h3>These is a list of all sightings. Click each link to see details! </h3> 
+            {%if sightings%}
+                <ul>
+                    {%for sighting in sightings%}
+		    <li>{{sighting}}</li>
+		    <a href='{% url 'sightings:update' Unique_Squirrel_ID=sighting.Unique_Squirrel_ID%}'>Update it</a>
+                   
+		    {%endfor%}
+                </ul>
+            {% else %}
+                <p>There is no sightings at all</p>
+            {%endif%}
+	
+	    <br></br>
+	<h4> This page refers to  this part of the assignment: A view that lists all squirrel sightings with links to edit and add sightings</h4>
+
+    </body>
+</html>
