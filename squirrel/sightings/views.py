@@ -58,7 +58,6 @@ def stats(request):
         'black': black,
         'cinnamon': cinnamon,
         'gray': gray,
-        'approach': approach,
         'running': running,
         'chasing':chasing,
         'climbing':climbing,
