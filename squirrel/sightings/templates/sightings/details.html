@@ -1,40 +1,41 @@
+  
 <html>
     <head>
 
     </head>
     <body>
 
-        <div class="miniwrap">
-        <h2>ID: {{ sighting.Unique_Squirrel_ID }}</h2>
-        <h3>Shift: {{ sighting.Shift }}</h3>
-	<h3>Latitude: {{sighting.Latitude}}</h3>
-	<h3>Date: {{sighting.Date}}</h3>
-	<h3>Age: {{sighting.Age}}</h3>
-	<h3> Primary_fur_color: {{sighting.Primary_fur_color}}</h3>
-	<h3> Location: {{sighting.Location}}</h3>
-	<h3> Specific_location: {{sighting.Specific_location}}</h3>
-	<h3> Running: {{sighting.Running}}</h3>
-	<h3> Chasing: {{sighting.Chasing}}</h3>
-	<h3> Climbing: {{sighting.Climbing}}</h3>
-	<h3> Eating: {{sighting.Eating}}</h3>
-	<h3> Foraging: {{sighting.Foraging}} </h3>
-	<h3> Other_Activities: {{sighting.Other_Activities}}</h3>
-	<h3> Kuks: {{sighting.Kuks}} </h3>
-	<h3> Quaas: {{sighting.Quaas}} </h3>
-	<h3> Moans: {{sighting.Moans}} </h3>
-	<h3>Tail_flags: {{sighting.Tail_flags}}</h3>
-	<h3>Tail_twitches: {{sighting.Tail_twitches}}</h3>
-	<h3>Approaches: {{sighting.Approaches}}</h3>
-	<h3> Indifferent:{{sighting.Indifferent}}</h3>
-	<h3> Runs_from {{sighting.Runs_from}}</h3>
+        <div>
+        <p>ID: {{ sighting.Unique_Squirrel_ID }}<p>
+        <p>ID: {{ sighting.Longitude }}<p>
+        <p>Latitude: {{sighting.Latitude}}<p>
+        <p>Shift: {{ sighting.Shift }}<p>
+	<p>Date: {{sighting.Date}}<p>
+	<p>Age: {{sighting.Age}}<p>
+	<p> Primary_fur_color: {{sighting.Primary_fur_color}}<p>
+	<p> Location: {{sighting.Location}}<p>
+	<p> Specific_location: {{sighting.Specific_location}}<p>
+	<p> Running: {{sighting.Running}}<p>
+	<p> Chasing: {{sighting.Chasing}}<p>
+	<p> Climbing: {{sighting.Climbing}}<p>
+	<p> Eating: {{sighting.Eating}}<p>
+	<p> Foraging: {{sighting.Foraging}} <p>
+	<p> Other_Activities: {{sighting.Other_Activities}}<p>
+	<p> Kuks: {{sighting.Kuks}} <p>
+	<p> Quaas: {{sighting.Quaas}} <p>
+	<p> Moans: {{sighting.Moans}} <p>
+	<p>Tail_flags: {{sighting.Tail_flags}}<p>
+	<p>Tail_twitches: {{sighting.Tail_twitches}}<p>
+	<p>Approaches: {{sighting.Approaches}}<p>
+	<p> Indifferent:{{sighting.Indifferent}}<p>
+	<p> Runs_from {{sighting.Runs_from}}<p>
 
+        <li><a href="{% sightings: 'index' %}" role ='button'><span>Return to home page</span></a></li>
+       <li><a href="{% sightings: 'update' %}"><span>Update</span></a></li>
 
 
 	
-	<a href='{% url 'sightings:index'%}'role='button'>Go back to the index page</a>
-	<a href='{%url 'sightings:update' Unique_Squirrel_ID={{sighting.Unique_Squirrel_ID}}%}'role='button'>Update it!</a>
 	
-	</p>
         </div>
     </body>
 </html>
