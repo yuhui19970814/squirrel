@@ -1,4 +1,3 @@
-
 import csv
 from map.models import squirrels
 from django.core.management import BaseCommand

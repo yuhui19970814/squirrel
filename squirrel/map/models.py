@@ -61,3 +61,4 @@ class squirrels(models.Model):
    
     def __str__(self):
         return self.Unique_Squirrel_ID
+# Create your models here.
