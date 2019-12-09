@@ -1,10 +1,15 @@
 from django.urls import path
-  
+from django.conf.urls import url, include
 from . import views
+
+app_name='sightings'
+
 urlpatterns = [
-    path('', views.all_squirrels),
-    path('add/', views.add_squirrels),
-    path('<unique_squirrel_id>/', views.update_squirrels),
-    path('stats/',views.stats),
+    path('', views.index, name = "index"),
+    path('add/',views.add,name = "add"),
+    path('stats/',views.stats,name='stats'),
+  #  path('<Unique_Squirrel_ID>/', views.details, name = "details"),
+  path('<Unique_Squirrel_ID>/', views.update, name = "update"),
+
 ]
 

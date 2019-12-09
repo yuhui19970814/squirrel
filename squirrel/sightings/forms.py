@@ -1,7 +1,7 @@
-from django.forms import ModelForm 
-from .models import Squirrel
-class SquirrelForm(ModelForm): 
-    class META: 
-        model = Squirrel 
-        fields ='__all__'
+from django.forms import ModelForm
+from map.models import squirrels
+class SquirrelForm(ModelForm):
+        class Meta:
+            model=squirrels
+            fields='__all__'
 
