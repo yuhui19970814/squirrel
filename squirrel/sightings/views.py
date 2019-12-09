@@ -5,7 +5,7 @@ from .models import Squirrel
 from .forms import SquirrelForm
 
 def all_squirrels(request):
-    squirrels=Squirrel.objects.all()[:100]
+    squirrels=Squirrel.objects.all()[:45]
     context = {
         'squirrels':squirrels,
     }
@@ -58,7 +58,6 @@ def stats(request):
         'black': black,
         'cinnamon': cinnamon,
         'gray': gray,
-        'approach': approach,
         'running': running,
         'chasing':chasing,
         'climbing':climbing,
