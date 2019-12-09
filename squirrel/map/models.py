@@ -25,7 +25,7 @@ class squirrels(models.Model):
         (PM,'PM'),
         (OTHERS,''),
     )
-    shift=models.CharField(
+    Shift=models.CharField(
         max_length=2,
         choices=SHIFT_CHOICES,
         default=OTHERS,
