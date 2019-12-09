@@ -19,6 +19,7 @@ the link of the map is as bellow:
 4.group information
 
 Group name and section: Project Group 81, Section 2
-UNI for team members: [sy2882,hy2625]
+
+UNI for team members: [ sy2882, hy2625]
 
 
