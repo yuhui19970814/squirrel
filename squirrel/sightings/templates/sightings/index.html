@@ -10,7 +10,7 @@
         <h2>Sightings of all squirrels </h2> 
             {%if sightings%}
                 <ul>
-                    {%for sighting in sightings:%}
+                    {%for sighting in sightings%}
 		    <li>{{sighting}}</li>
 		    <a href='{% url 'sightings:update' Unique_Squirrel_ID=sighting.Unique_Squirrel_ID%}'>Update</a>
                    
