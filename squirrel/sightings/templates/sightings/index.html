@@ -4,8 +4,9 @@
         
         <h1>The squirrels in the Central Park</h1>
 
-        <a href='{%url 'sightings:add'%}'>Click to add a new sighting</a>
-	<a href='{% url 'sightings:stats'%}'>Click to view the statistics of the squirrels</a>
+        <li><a href='{%url 'sightings:add'%}'><span><font size="5">Click to add a new sighting</font></span></a></li>
+	<li><a href='{% url 'sightings:stats'%}'><span><font size="5">Click to view the statistics of the squirrels</font></span></a></li>
+
 
         <h2>Sightings of all squirrels </h2> 
             {%if sightings%}
