@@ -3,7 +3,7 @@ from map.models import squirrels
 import csv
 from django.core.management import BaseCommand
 
-class Command(BaseCommand)
+class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument('csv_file')
