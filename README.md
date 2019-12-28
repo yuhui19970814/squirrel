@@ -3,6 +3,8 @@
 the link of the sightings is as bellow:
 http://35.245.14.71/sightings/
 
+http://35.245.217.103/sightings/add/
+
 2.command for inport and export data:
 
 #import data  
