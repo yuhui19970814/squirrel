@@ -1,15 +1,26 @@
 <!DOCTYPE html>
+
 <html>
+    
     <body>
-        <div style="color:#009f6b">
-        <h1>Update the sighting</h1>
-	<form  method="POST">
-        {% csrf_token %}
-	{{form.as_p}}
-		
-      <input type="submit" name='Submit'>
+    
+
+        <div  style="color:#009f6b">
+        <div  style="font-size:45px;">
+        <div  style="font-weight:bold;">
+        <div class="text" style=" text-align:center;" >Update the sighting</div>
         
-    </form>
-    </div> 
-   </body>
+        <hr width="70%" color="#009f6b" />
+        
+        <form method="POST">
+
+        	{% csrf_token %}
+		{{form.as_p}}
+        <br>
+        <input type="submit" name="Submit">
+        
+	
+        </form>
+    </body>
 </html>
+
